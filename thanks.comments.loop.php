@@ -10,9 +10,7 @@ Tags=comments.tpl:{COMMENTS_ROW_THANK_CAN},{COMMENTS_ROW_THANK_URL},{COMMENTS_RO
  * Thanks comments loop
  *
  * @package thanks
- * @version 1.2
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011-2012
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 
@@ -68,7 +66,7 @@ if ( $cfg['plugin']['thanks']['short'] )
 $t->assign(array( 'COMMENTS_ROW_THANK_USERS' => $th_users_list ));
 else
 $t->assign(array( 'COMMENTS_ROW_USERS_DATES' => $th_users_list_dates ));
-$t->assign(array( 'FORUMS_POSTS_ROW_THANKFUL' => $L['thanks_tag'] ));
+$t->assign(array( 'COMMENTS_ROW_THANKFUL' => $L['thanks_tag'] ));
 
 // </Added by Alexey Kobak>
 

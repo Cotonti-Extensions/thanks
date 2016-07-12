@@ -3,9 +3,7 @@
  * Thanks API
  *
  * @package thanks
- * @version 1.0
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 
@@ -21,6 +19,26 @@ define('THANKS_ERR_MAXDAY', 1);
 define('THANKS_ERR_MAXUSER', 2);
 define('THANKS_ERR_ITEM', 3);
 define('THANKS_ERR_SELF', 4);
+
+/**
+ * Generates rating column header title with sorting mode links
+ * @param string $col_text Column title
+ * @param string $sortfield Sortint field name ('count' | 'total')
+ * @return string
+ */
+function thanks_rating_sort_link($col_text, $sortfield)
+{
+	global $s, $w, $d;
+	if ($s == $sortfield) {
+		$order = ($w == 'ASC') ? 'DESC' : 'ASC';
+		$arrow = ($order == 'DESC') ? cot::$R['icon_down'] : cot::$R['icon_up'];
+	}
+
+	return cot_rc_link(
+		cot_url('thanks', array('d' => $d, 's' => $sortfield, 'w' => $order)),
+		"$col_text $arrow"
+	);
+}
 
 /**
  * Adds a new thank. Don't forget to use thanks_check() before calling this function.
@@ -135,4 +153,3 @@ function thanks_remove_user($userid)
 	return $db->delete($db_thanks, "`th_touser` = ?", array($userid));
 }
 
-?>

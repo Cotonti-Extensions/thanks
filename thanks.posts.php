@@ -10,9 +10,7 @@ Tags=forums.posts.tpl:{FORUMS_POSTS_ROW_THANK_CAN},{FORUMS_POSTS_ROW_THANK_URL},
  * Thanks forum posts tags
  *
  * @package thanks
- * @version 1.0
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 

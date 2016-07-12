@@ -1,11 +1,13 @@
 <!-- BEGIN: MAIN -->
-<h2>{PHP.L.thanks_for_user}: <a href="{THANKS_USER_URL}">{THANKS_USER_NAME}</a></h2>
+<h2>{PHP.L.thanks_for_user}: <a href="{THANKS_USER_URL}">{THANKS_USER_NAME}</a> 
+<small>({THANKS_USER_TOTAL|mb_strtolower($this)})</small></h2>
 <table class="cells">
 	<tr>
 		<td class="coltop">{PHP.L.Date}</td>
 		<td class="coltop">{PHP.L.Sender}</td>
 		<td class="coltop">{PHP.L.Category}</td>
 		<td class="coltop">{PHP.L.Item}</td>
+        <td class="coltop">{PHP.L.Item}</td>
 	</tr>
 	<!-- BEGIN: THANKS_ROW -->
 	<tr>

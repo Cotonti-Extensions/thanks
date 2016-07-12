@@ -1,13 +1,9 @@
 <?php
 
 /**
- * Thanks  Resources
+ * Thanks resources file
  *
  * @package thanks
- * @version
- * @author
- * @copyright
- * @license
  */
 
 defined('COT_CODE') or die('Wrong URL');

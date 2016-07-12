@@ -9,9 +9,7 @@ Hooks=comments.query
  * Thanks comments query
  *
  * @package thanks
- * @version 1.2
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011-2012
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 

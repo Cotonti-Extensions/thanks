@@ -14,4 +14,4 @@ defined('COT_CODE') or die('Wrong URL');
 global $db_users;
 $db->query("ALTER TABLE $db_users ADD COLUMN `user_thanks` INT NOT NULL DEFAULT 0");
 
-?>
+

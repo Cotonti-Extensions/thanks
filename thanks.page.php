@@ -10,9 +10,7 @@ Tags=page.tpl:{PAGE_THANK_CAN},{PAGE_THANK_URL},{PAGE_THANK_LINK},{PAGE_THANK_US
  * Thanks page tags
  *
  * @package thanks
- * @version 1.0
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 
@@ -72,7 +70,7 @@ foreach ($res as $rows)
 	$t->assign(array( 'PAGE_THANK_USERS' => $th_users_list, ));
 	else
 	$t->assign(array( 'PAGE_THANK_USERS_DATES' => $th_users_list_dates ));
-	$t->assign(array( 'FORUMS_POSTS_ROW_THANKFUL' => $L['thanks_tag'] ));
+	$t->assign(array( 'PAGE_THANKFUL' => $L['thanks_tag'] ));
 
 // </Added by Alexey Kobak>
 

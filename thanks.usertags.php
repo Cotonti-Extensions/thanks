@@ -9,9 +9,7 @@ Hooks=usertags.main
  * Thanks user tags
  *
  * @package thanks
- * @version 1.0
- * @author Trustmaster
- * @copyright Copyright (c) Vladimir Sibirov 2011
+ * @copyright Copyright (c) Vladimir Sibirov
  * @license BSD
  */
 
@@ -29,4 +27,4 @@ $temp_array['THANKS'] = $user_data['user_thanks'];
 $temp_array['THANKS_URL'] = cot_url('plug', 'e=thanks&user=' . $user_data['user_id']);
 $temp_array['THANKS_TIMES'] = cot_declension($user_data['user_thanks'], 'Times', true);
 
-?>
+
