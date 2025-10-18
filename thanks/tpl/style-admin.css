@@ -1,0 +1,42 @@
+#thanks-filter,
+#thanks-selected-users {
+    margin: 15px;
+}
+#thanks-filter-inputs {
+    display: flex;
+    margin-bottom: 10px;
+}
+#thanks-filter-inputs select {
+    flex-grow: 2;
+}
+#thanks-filter-inputs label {
+    margin-right: 8px;
+    margin-left: 15px;
+}
+#thanks-filter-inputs label:first-of-type {
+    margin-left: 0;
+}
+.thanks-user {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    line-height: normal;
+}
+#thanks-selected-users {
+    display: flex;
+    gap: 5px;
+    flex-grow: 1;
+}
+.thanks-selected-user-row {
+    flex-grow: 1;
+}
+.thanks-selected-user {
+    display: flex;
+    gap: 5px;
+}
+.thanks-selected-user img.avatar {
+    max-height: 80px;
+}
+.ac_results {
+    z-index: 999;
+}
