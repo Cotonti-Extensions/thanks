@@ -1,7 +1,7 @@
 Thanks
 ============
 
-Plugin for [CMF Cotonti](https://www.cotonti.com) let users thank each other .
+Plugin for [CMF Cotonti](https://www.cotonti.com) that let users thank each other .
 
 Authors: [Trustmaster](https://www.cotonti.com/users/Trustmaster), [Kalnov Alexey](https://github.com/Alex300) <kalnovalexey@yandex.ru>, Cotonti Team
 
