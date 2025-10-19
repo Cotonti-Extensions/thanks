@@ -110,8 +110,8 @@ foreach (ThanksRequestDto::getRequestedItems() as $source => $sourceIds) {
 }
 
 $buffer = ob_get_contents();
+ob_clean();
 $buffer = str_replace(array_keys($lastThankedWidgets), array_values($lastThankedWidgets), $buffer);
 $buffer = str_replace(array_keys($addThankWidgets), array_values($addThankWidgets), $buffer);
 $buffer = str_replace(array_keys($thankCountWidgets), array_values($thankCountWidgets), $buffer);
-ob_end_clean();
 echo $buffer;
