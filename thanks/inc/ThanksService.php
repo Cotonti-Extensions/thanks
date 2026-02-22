@@ -16,6 +16,7 @@ use Cot;
 use cot\modules\pm\services\PrivateMessageService;
 use cot\plugins\thanks\exceptions\NotFoundException;
 use cot\services\ItemService;
+use cot\users\UsersHelper;
 use DateTime;
 use DateTimeZone;
 use Throwable;
@@ -171,11 +172,11 @@ class ThanksService
     /**
      * @param string[] $condition
      * @param array<string, int|float|string> $params
-     * @param int $parentTrashId When deleting to the trash an object to which these thanks belong,
+     * @param ?int $parentTrashId When deleting to the trash an object to which these thanks belong,
      *  the id of the object in the trash
      * @return int deleted items count
      */
-    public static function deleteThankByCondition(array $condition, array $params = [], int $parentTrashId = 0): int
+    public static function deleteThankByCondition(array $condition, array $params = [], ?int $parentTrashId = 0): int
     {
         global $lang;
 
@@ -299,16 +300,18 @@ class ThanksService
             return false;
         }
 
+        $usersHelper = UsersHelper::getInstance();
+
         $thankedUserUrl = cot_url(
             'users',
             ['m' => 'details', 'id' => $fromUser['user_id'], 'u' => $fromUser['user_name']]
         );
-        $thankedUserName = htmlspecialchars(cot_user_full_name($fromUser));
+        $thankedUserName = htmlspecialchars($usersHelper->getFullName($fromUser));
 
         $notificationBody = cot_rc(
             Cot::$L['thanks_notificationBody'],
             [
-                'userName' => cot_user_full_name($toUser),
+                'userName' => $usersHelper->getFullName($toUser),
                 'fromUser' => cot_rc_link($thankedUserUrl, $thankedUserName),
                 'item' => mb_lcfirst($item->getTitleHtml()),
             ]
